@@ -19,6 +19,13 @@
   :root{
     --ink:#1B1A18; --charcoal:#2E2E2E; --paper:#F6F4F1; --white:#FFFFFF;
     --yellow:#F5B222; --orange:#E77C24; --muted:#64605A; --soft:#8A857D; --line:#E3DFD9;
+    /* De "Paleta de Colores corporativos.pdf": gris medio para el footer y el
+       cuadro de datos de contacto, y el amarillo alto, que sobre ese gris es el
+       unico de los dos amarillos que pasa contraste (5.08 contra 4.38). */
+    --gray:#504F4F; --yellow-hi:#FFC300;
+    /* Texto secundario sobre --gray. Los grises anteriores (#9C968C, #948E85,
+       #6F6A62) se pensaron para fondo casi negro y aqui caen a 2.5-2.8. */
+    --on-gray:#CFC9C1; --gray-line:#767574;
     --pad:clamp(20px,5vw,72px);
   }
   *{box-sizing:border-box}
@@ -143,28 +150,28 @@
   button.send:hover{background:#1B1A18}
   .send{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 32px;
         background:var(--charcoal);color:#fff;font-size:16px;font-weight:700}
-  .panel{display:flex;flex-direction:column;gap:26px;padding:40px 36px;background:var(--charcoal)}
+  .panel{display:flex;flex-direction:column;gap:26px;padding:40px 36px;background:var(--gray)}
   .panel h3{margin:0;font-size:22px;color:#fff;text-transform:uppercase}
   .row{display:flex;gap:15px;align-items:flex-start}
   .row svg{flex:none;margin-top:2px}
-  .row small{display:block;font-size:12px;font-weight:700;letter-spacing:.13em;color:#9C968C}
+  .row small{display:block;font-size:12px;font-weight:700;letter-spacing:.13em;color:var(--on-gray)}
   .row span{display:block;font-size:18px;font-weight:600;line-height:1.4;color:#fff}
 
   /* footer */
-  footer{background:var(--ink)}
+  footer{background:var(--gray)}
   .fcols{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:clamp(28px,4vw,64px);
          padding-top:56px;padding-bottom:48px}
   .fcols h4{margin:0 0 4px;font-family:'Archivo Black','Arial Black',sans-serif;font-weight:400;
             font-size:14px;letter-spacing:.07em;color:#fff;text-transform:uppercase}
   .fcol{display:flex;flex-direction:column;gap:12px}
-  .fcol a,.fcol span{font-size:15px;line-height:1.5;color:#948E85}
-  .fcol a:hover{color:var(--yellow)}
+  .fcol a,.fcol span{font-size:15px;line-height:1.5;color:var(--on-gray)}
+  .fcol a:hover{color:var(--yellow-hi)}
   .logopatch{display:flex;align-items:center;justify-content:center;width:128px;height:78px;background:#fff}
   .social{display:flex;gap:12px;margin-top:6px}
-  .social a{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid #3A3833}
-  .social a:hover{border-color:var(--yellow)}
+  .social a{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid var(--gray-line)}
+  .social a:hover{border-color:var(--yellow-hi)}
   .fbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;
-        padding-top:20px;padding-bottom:20px;border-top:1px solid #302E2A;font-size:14px;color:#6F6A62}
+        padding-top:20px;padding-bottom:20px;border-top:1px solid var(--gray-line);font-size:14px;color:var(--on-gray)}
 
   @media (max-width:1180px){ .cards4{grid-template-columns:repeat(2,minmax(0,1fr))} }
   @media (max-width:1000px){
