@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+# sitio/ son los fuentes desde los que se genera index.html (ver build.py).
+# Estan en el repo para respaldo, pero no deben indexarse: index.src.html es
+# una copia del contenido de la portada.
+Disallow: /sitio/
 
 Sitemap: https://equiposmr.com.co/sitemap.xml

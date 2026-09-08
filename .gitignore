@@ -1,0 +1,10 @@
+# Sobras del proceso manual, de antes de que existiera build.py:
+#   index.html    el intermedio con las fotos en base64; ahora lo genera el
+#                 build en la raiz del repo
+#   chk-movil.png una captura de revision
+# Se pueden borrar sin problema; no se versionan.
+sitio/index.html
+sitio/chk-movil.png
+
+__pycache__/
+*.pyc

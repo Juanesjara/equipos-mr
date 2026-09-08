@@ -1,0 +1,4 @@
+# Los saltos de linea se mantienen en LF en el arbol de trabajo. Si Git los
+# convirtiera a CRLF, build.py generaria un index.html con bytes distintos y
+# cada build dejaria un diff de 32 KB sin ningun cambio real.
+* text=auto eol=lf
